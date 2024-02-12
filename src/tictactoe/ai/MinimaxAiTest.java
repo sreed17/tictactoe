@@ -43,8 +43,8 @@ public class MinimaxAiTest {
     game.play(1, 0); // Player O
     // Now it's AI's turn, AI should choose position (2, 0) to block the opponent
     int[] bestMove = MinimaxAi.getBestMove(game);
-    Assert.assertEquals(2, bestMove[0]);
-    Assert.assertEquals(0, bestMove[1]);
+    int[] expected = {2, 1};
+    Assert.assertArrayEquals(expected, bestMove);
   }
 
   @Test
